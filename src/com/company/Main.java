@@ -20,14 +20,21 @@ public class Main {
         int guessUser2 = keyboard2.nextInt();
         int scorePlayer2 = GuessNumber.guessNumber(guessUser2);
 
+            //the win score system
         System.out.println(player1+" tried "+ scorePlayer1);
         System.out.println(player2+" tried "+ scorePlayer2);
         String winnerPlayer;
-        if (scorePlayer1<scorePlayer2){
+
+            //The win message
+        if(scorePlayer1 == scorePlayer2){
+            System.out.println("Both has the same score :D");
+        }
+        else if (scorePlayer1 < scorePlayer2){
             winnerPlayer = player1;
+            System.out.println("Congratulations "+winnerPlayer+", you won!");
         } else {
             winnerPlayer = player2;
+            System.out.println("Congratulations "+winnerPlayer+", you won!");
         }
-        System.out.println("Congratulations "+winnerPlayer+", you won!");
     }
 }
